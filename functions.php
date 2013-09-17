@@ -1,0 +1,51 @@
+<?php
+	
+	// Add RSS links to <head> section
+	automatic_feed_links();
+	
+	// Load jQuery
+	if ( !is_admin() ) {
+	   wp_deregister_script('jquery');
+	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
+	   wp_enqueue_script('jquery');
+	}
+	
+	// Clean up the <head>
+	function removeHeadLinks() {
+    	remove_action('wp_head', 'rsd_link');
+    	remove_action('wp_head', 'wlwmanifest_link');
+    }
+    add_action('init', 'removeHeadLinks');
+    remove_action('wp_head', 'wp_generator');
+    
+    if (function_exists('register_sidebar')) {
+    	register_sidebar(array(
+    		'name' => 'Sidebar Widgets',
+    		'id'   => 'sidebar-widgets',
+    		'description'   => 'These are widgets for the sidebar.',
+    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    		'after_widget'  => '</div>',
+    		'before_title'  => '<h2>',
+    		'after_title'   => '</h2>'
+    	));
+    }
+	
+	//Muda o tamanho do excerpt.
+	function custom_excerpt_length( $length ) {
+		return 15;
+	}
+        
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+        
+        add_filter('the_content', 'my_addlightboxrel');
+                
+        function my_addlightboxrel($content) {
+        global $post;
+        $pattern = "/<a(.*?)href=('|')(.*?).(bmp|gif|jpeg|jpg|png)('|')(.*?)>/i";
+        $replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
+        $content = preg_replace($pattern, $replacement, $content);
+        return $content;
+        }
+
+
+?>

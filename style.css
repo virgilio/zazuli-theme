@@ -1,0 +1,634 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Stylesl
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+html, body {
+	height: 100%;
+}
+
+
+body {
+    background-image: url('images/paper_2.png');
+}
+
+p,a,h2,h4,h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+	text-shadow: rgba(0, 0, 0, .05) 0 0 1px;
+}
+
+h1,h3,h5{
+	font-family: 'Sanchez', sans-serif;
+	text-shadow: rgba(0, 0, 0, .05) 0 0 1px;
+}
+
+h1 {
+	font-size: 2.25em;
+	letter-spacing: 0.02em;
+	line-height: 1.3em;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 1.75em;
+}
+
+h3 {
+	font-size: 1.125em;
+	line-height: 1.3em;
+}
+
+/* Wordpress attachment alignment */
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+
+#wrapper {
+	height: auto !important;
+	min-height: 100%;
+    height: 100%;
+    
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Forms */
+#header form {
+	border-bottom: 0.2em solid #ff6000;
+	margin: 0 0 0.3em;
+	padding: 0 0.5em 0.625em 0;
+	
+	-webkit-box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6);
+	box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6); 
+}
+
+#header form input[type="text"], input[type="button"], input[type="password"], input[type="email"], textarea, select {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px 2px 2px 2px;
+    color: #777777;
+    display: block;
+    font: 14px 'Source Sans Pro',sans-serif;
+	float: left;
+    margin: 0 0 10px;
+    max-width: 100%;
+    outline: medium none;
+	padding: 0.215em;
+}
+
+#header form input[type="submit"] {
+	background: none repeat scroll 0 0 #1337b4;
+    border: 1px solid #1337b4;
+    border-radius: 0;
+    color: #FFFFFF;
+    font: 14px 'Source Sans Pro',sans-serif;
+	float: right;
+	margin: 0 -8px 0 0;
+    max-width: 100%;
+    outline: medium none;
+	padding: 0.2em 0.5em;
+}
+
+#header form a {
+	font: 14px 'Source Sans Pro',sans-serif;
+	text-decoration: none;
+}
+
+#header #header-search-form {
+	border-bottom: none;
+	box-shadow: none;
+	margin-bottom: 0;
+    margin-top: 10px;
+    padding-bottom: 0;
+}
+
+/* Cabe�alho */
+#header {
+	padding: 0.5em 0 0.2em;
+}
+
+#header #logo{
+	padding-top: 0.8em;
+}
+
+#header #area-de-login {
+	padding-top: 1.5em;
+}
+
+#header #area-perfil {
+	padding-top: 1.1em;
+}	
+	#header #area-perfil ul, #header #area-perfil #notificacoes-wrapper {
+		background-color: white;
+		margin: 0 0 0;
+		padding: 0.6em;
+		position: absolute;
+		z-index: 900;
+		
+		-webkit-box-shadow: 0px 2px 5px 0px rgba(80, 80, 80, 0.5);
+		box-shadow: 0px 2px 5px 0px rgba(80, 80, 80, 0.5);	
+	}
+		#header #area-perfil ul li {
+			margin: 0;
+		}
+
+	#header #area-perfil #logout-link {
+		padding: 0.4em 0;
+	}
+	#header #area-perfil a {
+		font-size: 0.85em;
+	}
+	#header #area-perfil #area-notificacoes {
+		position: absolute;
+		clear: both;
+		margin: 1.2em 0 0 -1.6em;
+	}
+	
+	#header #area-perfil #area-notificacoes #notificacoes-wrapper {
+		
+	}
+	#header #area-perfil #notificacoes-wrapper #notificacoes .notificacao{
+		padding: 0.4em 0;
+	}
+	#header #area-perfil #notificacoes-link {
+		display: block;
+		height: 20px;
+		width: 20px;
+	}
+		#header #area-perfil #notificacoes-link #numero-notificacoes {
+			padding: 0.1em 0.45em;
+		}
+		
+		.notificacoes-aceso {
+			background-image: url('images/notificacoes_aceso.png');
+			color: white;
+		}
+		
+		.notificacoes-apagado {
+			background-image: url('images/notificacoes_apagado.png');
+			color: #545351;
+		}
+
+/* Caixa de texto destacado */
+
+.highlighted-text-box {
+	padding: 1em 0;
+}
+.highlighted-text-box p.highlighted-text{
+	font: 2.3em 'Sanchez',serif;
+}
+
+.highlighted-text-box p.light-highlighted-text{
+	font: 1.6em 'Source Sans Pro',sans-serif;
+	font-weight: 300;
+}
+
+p.light-highlighted-text{
+	font: 1.6em 'Source Sans Pro',sans-serif;
+	font-weight: 300;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+/* Como funciona o Zazu?*/
+#steps-wrapper {
+    padding: 0.8em 0 1.5em;
+}
+
+.step {
+    padding: 2em 1em;
+    width: 220px;
+    
+    border-radius: 180px 180px 180px 180px;
+    -webkit-box-shadow: inset 0px 0px 8px 0px rgba(80, 80, 80, 0.4);
+    box-shadow: inset 0px 0px 8px 0px rgba(80, 80, 80, 0.4);	
+}
+
+.step img {
+    margin: 0 0 0.5em 1.4em;
+    width: 180px;
+}
+
+.arrow {
+    margin-top: 8em;
+}
+
+#steps-description {
+    margin: 1.2em 0;
+}
+#steps-description h2 {
+    font-size: 2em;
+}
+
+/* Conteudo */
+#content {
+	padding: 0.8em 0 1.5em;
+	padding-bottom: 7em;
+}
+	#content p{
+		margin: 0 0 0.8em 0;
+	}
+        
+	.entry {
+		border-top: 1px solid #e3e3e3;
+		clear: both;
+		margin-top: 1.5em;
+		padding-top: 1.5em;
+	}
+	
+	.entry a, .entry a:active, .entry a:link {
+		color: #1741d5;
+	}
+	
+	.entry a:hover {
+		color: #ff6000;
+	}
+	
+	.wp-caption-text {
+		color: #808080;
+		font-size: 0.8em;
+		font-style: italic;	
+		padding: 0.3em;
+		text-align: right;		
+	}
+	
+	/* AddThis: botões de compartilhamento no fim do post */
+	.addthis_button_compact {
+		display: none;
+	}
+	
+	.addthis_toolbox {
+		padding: 2em 0 0.5em;
+	}
+	
+	/* Metadados nas paginas que tem listagem de posts */
+	.meta p{
+		margin: 0 0 0.5em;
+	}
+	
+	/* Estilos pra listas de conteudo. Ex: posts em arquivo de tags */
+	.content-list .entry, .commentlist li {
+		margin-top: 1.5em;
+	}
+	
+	.content-list .post, .commentlist li {
+		padding: 0;
+	}
+	
+	/* Comentários */
+	#comments-wrapper {
+		overflow: hidden;
+	}
+	
+	.comment-reply-link {
+		color: #1337b4;
+		font-family: 'Sanchez';
+		font-size: 0.8em;
+	}
+	
+	.comment-author {
+		margin-bottom: 0.2em;
+	}
+		
+		.comment-author cite, .comment-author .says {
+			color: #1337b4;
+			font-family: 'Sanchez';
+		}
+		
+	.comment-meta {
+		margin-bottom: 0.8em;
+	}
+		.comment-meta a {
+			font-size: 0.9em;
+		}
+		
+	/* Caixa de avaliação */
+	.ratings {
+		padding: 0.5em;
+	}
+
+/* Tags page*/
+.tag-cover {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    
+    margin-bottom: 1.5em;
+    min-height: 12.5em;
+}
+
+.tag-title {
+    background-color: #232323;
+    color: white;
+    filter: dropshadow(color=#323232, offx=1, offy=1);
+    padding: 0.1em 0.2em;
+    text-shadow: 1px 1px 1px #323232;
+    text-align: center;
+    word-wrap: break-word;
+
+}
+
+.tag-title {
+    color: white;
+    word-wrap: break-word;
+
+    text-shadow: 1px 1px 1px #323232;
+    filter: dropshadow(color=#323232, offx=1, offy=1);
+}
+
+/*Add tags form on post page*/
+.add-tags {
+    width: 200px;
+}
+
+.add-tags-send {
+    padding: 5px 10px!important;
+}
+
+
+/* Mar de notícias*/
+#mar-de-noticias {
+	overflow: hidden;
+	padding: 0.5em 0 2em;
+}
+
+	#mar-de-noticias .noticia-do-mar {
+		background-position: center;
+		background-repeat: no-repeat;
+		float: left;
+		margin: 0.5em;
+		padding: 0;
+	
+				
+		-webkit-box-shadow: inset 0px 0px 10px 0px rgba(80, 80, 80, 0.6);
+		box-shadow: inset 0px 0px 10px 0px rgba(80, 80, 80, 0.6);	
+	}
+	
+	#mar-de-noticias .noticia-do-mar div:hover {
+		background-image: url('images/slider_hover_bg.png');
+	}
+		
+		
+		#mar-de-noticias .noticia-do-mar div{
+			padding: 0.5em;
+			background-image: url('images/slider_hover_bg2.png');
+		}
+		
+		#mar-de-noticias .noticia-do-mar a {
+			color: white;
+			font-family: 'Sanchez', serif;
+			font-weight: 500;
+			word-wrap: break-word;
+					
+			text-shadow: 1px 1px 3px #323232;
+                        filter: dropshadow(color=#323232, offx=1, offy=1);
+		}
+		
+		#mar-de-noticias .noticia-do-mar div h4 {
+			font-size: 0.9em;
+			line-height: 1.3em
+		}
+		
+		#mar-de-noticias .noticia-do-mar div p {
+			font-size: 1.2em;
+		}
+		
+/* Pontuacao */
+.pontuacao-wrapper {
+	margin-top: -0.8em;
+}
+
+.pontuacao-regua li {
+	background-color: #1337B4;
+	display: inline;
+	padding: 0.4em;
+}
+
+.pontuacao-regua li:nth-child(1):hover {
+	background-color: #0E0E6D;
+}
+
+.pontuacao-regua li:nth-child(2):hover {
+		background-color: #1337B4;
+}
+
+.pontuacao-regua li:nth-child(3):hover {
+	background-color: #1741D5;
+}
+
+.pontuacao-regua li:nth-child(4):hover {
+	background-color: #FF6000;
+	
+}
+
+.pontuacao-regua li a {
+	color: white !important;
+}
+/* Slider geral*/
+.slider-wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+div.slider-wrapper a.prev,div.slider-wrapper a.next {
+	color: #0E0E6D;
+	font-family: 'Sanchez', serif;
+	font-size: 2em;
+	float: left;
+	margin: 0 0;
+}
+
+div.slider-wrapper a.next {
+	float: right;
+}
+
+ul.slider {
+	background-color: black;
+}
+	ul.slider li {
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-bottom: 0;
+	}
+
+		ul.slider li div {
+			padding: 1em;
+			height: 168px;
+			
+			-webkit-box-shadow: inset 0px 0px 10px 0px rgba(80, 80, 80, 0.6);
+			box-shadow: inset 0px 0px 10px 0px rgba(80, 80, 80, 0.6);	
+		}
+		
+		ul.slider li div:hover {
+			background-image: url('images/slider_hover_bg.png');
+		}
+		
+		ul.slider li div h4{
+			padding: 0.1em 0.2em;
+			background-color: #232323;
+		}
+		
+		ul.slider li a {
+			color: white;
+			font-family: 'Sanchez', serif;
+			font-size: 1.1em;
+			font-weight: 500;
+			word-wrap: break-word;
+			
+			text-shadow: 1px 1px 1px #323232;
+        	filter: dropshadow(color=#323232, offx=1, offy=1);
+		}
+		
+/* Artigos mais recentes */
+#latest-articles ul li h4 a: active, #latest-articles ul li h4 a: visited, #latest-articles ul li p, #latest-articles ul li p a:active, #latest-articles ul li p a:visited {
+	color: #595959;
+}
+
+/* Rodape */
+#footer {
+	position: absolute;
+    bottom: 0; /* Sit it on the bottom */
+    left: 0;
+    width: 100%; /* As wide as it's allowed */
+   
+	background-color: #0e0e6d;
+	padding: 0.7em 0 0.5em;
+	height: 5em;
+
+}
+
+#footer .footer-icons{
+	float: right;
+}
+
+#footer #menu-footer {
+	float: left;
+}
+
+#menu-footer li {
+	display: inline;
+	margin-right: 1.25em;
+}
+
+#menu-footer li a{
+	color: #ffffff;
+}
+
+.footer-icons ul li{
+	display: inline;
+	margin-right: 1em;
+}
+
+/* Efeitos */
+.box-shadow {
+	-webkit-box-shadow: 0px 0px 3px 2px rgba(160, 160, 160, 0.5);
+	box-shadow: 0px 0px 3px 2px rgba(160, 160, 160, 0.5); 
+}
+
+.top-shadow {
+	-webkit-box-shadow: 0px -5px 3px -3px rgba(160, 160, 160, 0.6);
+	box-shadow: 0px -5px 3px -3px rgba(160, 160, 160, 0.6); 
+}
+
+.bottom-shadow {
+	-webkit-box-shadow: 0px 5px 3px -3px rgba(180, 180, 180, 0.5);
+	box-shadow: 0px 5px 3px -3px rgba(180, 180, 180, 0.5); 
+}
+
+.hand-cursor {
+	cursor: pointer;
+}
+
+.destaque-sublinhado, .comment-body { /* Comment list added to the same effect so we don't need to change /wp-includes files */
+	padding-bottom: 0.4em;
+	border-bottom: 0.1em solid #ff6000;
+	
+	-webkit-box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6);
+	box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6); 
+}
+
+.destaque-regua {
+	border-bottom: 0.3em solid #ff6000;
+	
+	-webkit-box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6);
+	box-shadow: 0px 2px 0px -1px rgba(180, 180, 180, 0.6); 
+}
+
+::-moz-selection {
+    background-color: #ff6000;
+    color: #fff;
+}
+
+::-webkit-selection {
+	background-color: #ff6000;
+	color: #fff;
+}
+
+::selection {
+    background-color: #ff6000;
+    color: #fff;
+}
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
